@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial;
+        }
+        .grid-columns-3{
+            display: grid;
+            grid-template-columns: repeat(3,minmax(100px, 293px));
+            grid-gap: 10px;
+            justify-content: center;
+        }
+        .grid-columns-4{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            justify-content: center;
+        }
+        .column{
+            cursor: pointer;
+            position: relative;
+            display: block;            
+        }
+        .column-image{
+            margin: 0;
+        }
+        .column-image img{
+            width: 100%;   
+            vertical-align: top;         
+        }
+        .column-overlay{
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .column:hover .column-overlay{
+            display: flex;
+        }
+        .column-icon-1, .column-icon-2{
+            width: 80px;
+            margin: 5px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+        }
+        @media (max-width: 768px){
+            .grid-columns{
+                grid-gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="grid-columns-3">
+        <a href="" class="column">
+            <figure class="column-image">
+                <img src="https://images.pexels.com/photos/376361/pexels-photo-376361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Auto">
+            </figure>
+            <div class="column-overlay">        
+                <span class="column-icon-1">120</span>
+                <span class="column-icon-2">90</span>                
+            </div>
+        </a>
+        <a href="" class="column">
+                <figure class="column-image">
+                    <img src="https://images.pexels.com/photos/376361/pexels-photo-376361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Auto">
+                </figure>
+                <span class="column-overlay">
+                    <p>
+                        <span class="column-icon-1">120</span>
+                        <span class="column-icon-2">90</span>
+                    </p>
+                </span>
+            </a>
+        <a href="" class="column">
+            <figure class="column-image">
+                <img src="https://images.pexels.com/photos/376361/pexels-photo-376361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Auto">
+            </figure>
+            <span class="column-overlay">
+                <p>
+                    <span class="column-icon-1">120</span>
+                    <span class="column-icon-2">90</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="column">
+            <figure class="column-image">
+                <img src="https://images.pexels.com/photos/376361/pexels-photo-376361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Auto">
+            </figure>
+            <span class="column-overlay">
+                <p>
+                    <span class="column-icon-1">120</span>
+                    <span class="column-icon-2">90</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="column">
+            <figure class="column-image">
+                <img src="https://images.pexels.com/photos/376361/pexels-photo-376361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Auto">
+            </figure>
+            <span class="column-overlay">
+                <p>
+                    <span class="column-icon-1">120</span>
+                    <span class="column-icon-2">90</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="column">
+            <figure class="column-image">
+                <img src="https://images.pexels.com/photos/376361/pexels-photo-376361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Auto">
+            </figure>
+            <span class="column-overlay">
+                <p>
+                    <span class="column-icon-1">120</span>
+                    <span class="column-icon-2">90</span>
+                </p>
+            </span>
+        </a>
+    </section>
+</body>
+</html>
